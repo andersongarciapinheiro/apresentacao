@@ -174,12 +174,14 @@ var initAnimation = function () {
         timeline.animationElements('all_in', [['.bg_1', .2]]);
         timeline.animationElements('cta_in', [['.cta_txt', .3]]);
         timeline.animationElements('all_in', [['.txt_1_1', .1]]);
+
+       
     }
     else{
         // INIT
         // ████████████████ ◢ STEP01 ◣ █████████████████████████████████
 
-        timeline.animationElements('cortina_out', [['#banner', 0.1]]);
+        timeline.animationElements('cortina_out', [['.banner', 0.1]]);
         // BG IMAGE 1
         timeline.animationElements('all_in_default', [['.bg_1_default', .1]]);
         // 
@@ -200,6 +202,9 @@ var initAnimation = function () {
         timeline.animationElements('all_in_default', [['.bg_2_default', .2]]);
         timeline.animationElements('cta_in_default', [['.cta_txt_default', .2]]);
         timeline.animationElements('all_in_default', [['.txt_2_1_default', -.2]]);
+
+timeline.animationElements('LOOPING', [['.txt_2_1_default', 4]],initAnimation);
+        
     }
 
 	

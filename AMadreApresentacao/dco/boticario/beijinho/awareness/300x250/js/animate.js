@@ -210,6 +210,8 @@ timeline.animationElements('S4_PRODUTO_IMG_classMotion_0', [['.S4_PRODUTO_IMG', 
 timeline.animationElements('S4_TXT_IMG_classMotion_0', [['.S4_TXT_IMG', 0.60]]);
 timeline.animationElements('COLOR_CTA_classMotion_0', [['.COLOR_CTA', 0.40]]);
 timeline.animationElements('CTA_classMotion_0', [['.CTA', 0.30]]);
+
+
 timeline.animationElements('LOOPING', [['.CTA', 4]],initAnimation);
 
 

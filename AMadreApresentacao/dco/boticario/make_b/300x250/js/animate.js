@@ -254,7 +254,36 @@ let initAnimation = function() {
     timeline.animationElements('s4_txt2_motion14', [['.s4_txt2', 0.1]]);
     timeline.animationElements('s4_txt2_motion14', [['.ctaBox', 0.1]]);
 
-   
 
+    timeline.animationElements('STOP_HERE', [['.ctaBox', 0]],function(){
+        loopingNow();
+    });
+    
+
+
+}
+
+
+
+function loopingNow(){
+
+    setTimeout(function(){
+        timeline.clearAnimation(".all");
+        el('.player_1').pause();
+        el('.player_1').currentTime = 0;
+        el('.player_2').pause();
+        el('.player_2').currentTime = 0;
+        el('.player_3').pause();
+        el('.player_3').currentTime = 0;
+
+        el(".s1_sprite1").style.backgroundPositionY = "0px";
+
+        el(".s1_sprite1").style.opacity = 0;
+
+        el(".s2_bg1").classList.remove("s2_bg1_motion4");
+        el(".s3_bg1").classList.remove("grupo_video3_motion8");
+
+        initAnimation();
+    },4000)
 
 }

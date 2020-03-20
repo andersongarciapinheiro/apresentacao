@@ -165,7 +165,7 @@ var initAnimation = function () {
         // INIT
         // ████████████████ ◢ STEP01 ◣ █████████████████████████████████
 
-        timeline.animationElements('cortina_out', [['#banner', 0.1]]);
+        timeline.animationElements('cortina_out', [['.banner', 0.1]]);
         timeline.animationElements('scale_in', [['.logo_vw_1', .2]]);
 
 
@@ -174,6 +174,9 @@ var initAnimation = function () {
         timeline.animationElements('all_in', [['.bg_1', .2]]);
         timeline.animationElements('cta_in', [['.cta_txt', .3]]);
         timeline.animationElements('all_in', [['.txt_1_1', .1]]);
+
+        timeline.animationElements('LOOPING', [['.txt_1_1', 4]],initAnimation);
+        
     }
     else{
         // INIT

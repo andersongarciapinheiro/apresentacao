@@ -182,7 +182,23 @@ var initAnimation = function() {
     timeline.animationElements('s2_ctabg1_motion22', [['.s2_ctabg1', 0.3]]);
     timeline.animationElements('s2_ctatxt1_motion23', [['.s2_ctatxt1', 0.1]]);
     timeline.animationElements('s2_ctatxt1_motion23', [['.txt_legal', 0.1]]);
-    timeline.animationElements('LOOPING', [['.txt_legal', 4]],initAnimation);
-    
+
+    timeline.animationElements('STOP_HERE', [['.txt_legal', 0]],function(){
+        loopingNow();
+    });
+
+}
+
+
+
+function loopingNow(){
+
+    setTimeout(function(){
+        timeline.clearAnimation(".all");
+        el('.player_1').pause();
+        el('.player_1').currentTime = 0;
+        el(".sprite_txt").style.backgroundPositionY = "0px";
+        initAnimation();
+    },4000)
 
 }

@@ -217,6 +217,11 @@ initAnimation = function(e){
 		timeline.animationElements("objects_in",[[".cta_1",.2]]);
 		timeline.animationElements("objects_in",[[".logo_1",.2]]);
 
+		timeline.animationElements('STOP_HERE', [['.logo_1', 0]],function(){
+			loopingNow();
+		});
+		
+
 	}
 	else if(template_used === 2){
 		el('.template_2').style.display = "block";
@@ -288,3 +293,14 @@ initAnimation = function(e){
 }
 
 
+
+
+function loopingNow(){
+
+    setTimeout(function(){
+        timeline.clearAnimation(".all");
+        el(".logo_sprite_1").style.backgroundPositionX = "0px";
+        initAnimation();
+    },4000)
+
+}

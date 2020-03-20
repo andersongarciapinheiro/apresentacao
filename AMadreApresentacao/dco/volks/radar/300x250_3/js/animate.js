@@ -404,7 +404,7 @@ var initAnimation = function () {
     if(etapa!="default"){
         // ########## STEP1 ##########
 
-        timeline.animationElements('cortina_out', [['#banner', .1]]);
+        timeline.animationElements('cortina_out', [['.banner', .1]]);
         timeline.animationElements('scale_in', [['.logo1', .2]]);
         timeline.animationElements('all_in', [['.txt1', .1]]);
         timeline.animationElements('all_in2', [['.cta_txt', 1.8]]);
@@ -429,7 +429,7 @@ var initAnimation = function () {
         // INIT
         // ████████████████ ◢ STEP01 ◣ █████████████████████████████████
 
-        timeline.animationElements('cortina_out', [['#banner', 0.1]]);
+        timeline.animationElements('cortina_out', [['.banner', 0.1]]);
         // BG IMAGE 1
         timeline.animationElements('all_in_default', [['.bg_1_default', .1]]);
         // 
@@ -505,11 +505,35 @@ function assinatura(){
     timeline_Assinatura.animationElements('all_in', [['.txt2', .3]]);
     timeline_Assinatura.animationElements('btn_in', [['.cta_txt_final', .2]]);
     timeline_Assinatura.animationElements('all_in2', [['.logo2', .1]]);
+
+    timeline_Assinatura.animationElements('STOP_HERE', [['.logo2', 0]],function(){
+        loopingNow();
+    });
 }
 
 
 
+function loopingNow(){
 
+    setTimeout(function(){
+        timeline.clearAnimation(".all");
+        timeline_efeito.clearAnimation(".all");
+        timeline_Assinatura.clearAnimation(".all");
+
+         for(var e = 0 ; e < qtd ; e++){
+            el(".nav_txt_"+e).style.color = "#757575";
+        }
+       
+        el(".hitArea").style.zIndex = 999;
+        el(".sprite_final").style.zIndex = 0;
+        el(".txt2").style.zIndex = 0;
+        el(".cta_txt_final").style.zIndex = 0;
+        el(".logo2").style.zIndex = 0;
+
+        initAnimation();
+    },4000)
+
+}
 
 
 

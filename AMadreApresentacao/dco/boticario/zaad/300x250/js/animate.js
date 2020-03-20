@@ -299,8 +299,9 @@ else{
     timeline.animationElements('s2_ctaimg1_classMotion_4', [['.s2_ctaimg1', 0.90]]);
     timeline.animationElements('s2_ctaimg1_classMotion_5', [['.s2_ctaimg1', 0.90]]);
     timeline.animationElements('s2_ctaimg1_classMotion_6', [['.s2_ctaimg1', 0.90]]);
-    timeline.animationElements('LOOPING', [['.s2_ctaimg1', 4]],initAnimation);
 
+    timeline.animationElements('LOOPING', [['.s2_ctaimg1', 2]],initAnimation);
+    
 }
 
 

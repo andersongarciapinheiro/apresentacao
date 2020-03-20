@@ -252,14 +252,35 @@ let initAnimation = function () {
             timeline.animationElements('s2_ctabg1_classMotion_0', [['.s2_ctabg1', 0.20]]);
             timeline.animationElements('s2_ctatxt1_classMotion_0', [['.s2_ctatxt1', 0.10]]);
 
-
+            
             if(selo){
                 timeline.animationElements('s1_txt1_classMotion_1', [['.s2_txt1', timerSteps[1]]]);
                 timeline.animationElements('s1_txt1_classMotion_0', [['.s2_selo', 0.20]]);
                 timeline.animationElements('s2_txt1_classMotion_0', [['.txtLegal', 0.20]]);
+
+                timeline.animationElements('STOP_HERE', [['.txtLegal', 0]],function(){
+                    loopingNow();
+                });
+                
             }
         }
+
+
 
 }
 
 
+
+
+function loopingNow(){
+
+    setTimeout(function(){
+        timeline.clearAnimation(".all");
+        el('.player_1').pause();
+        el('.player_1').currentTime = 0;
+        el('.player_2').pause();
+        el('.player_2').currentTime = 0;
+        initAnimation();
+    },4000)
+
+}

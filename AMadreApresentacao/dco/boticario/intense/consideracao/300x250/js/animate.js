@@ -181,8 +181,25 @@ timeline.animationElements('s4_bg1_classMotion_0', [['.s4_bg1', timerSteps[2]]])
 timeline.animationElements('s4_logo1_classMotion_0', [['.s4_logo1', 0.20]]);
 timeline.animationElements('s4_ctabg1_classMotion_0', [['.s4_ctabg1', 0.60]]);
 timeline.animationElements('s4_ctatxt1_classMotion_0', [['.s4_ctatxt1', 0.10]]);
-timeline.animationElements('LOOPING', [['.s4_ctatxt1', 4]],initAnimation);
+
+
+timeline.animationElements('STOP_HERE', [['.s4_ctatxt1', 0]],function(){
+    loopingNow();
+});
+
 
 }
 
 
+
+
+function loopingNow(){
+
+    setTimeout(function(){
+        timeline.clearAnimation(".all");
+        el(".s1_sprite").style.backgroundPositionY = "0px";
+        el(".s1_sprite").style.opacity = 0;
+        initAnimation();
+    },4000)
+
+}

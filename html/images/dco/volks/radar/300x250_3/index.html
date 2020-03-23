@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />	
+	<meta name="ad.size" content="width=300,height=250">
+	<title>Banner - 300x250</title>
+	<link rel="stylesheet" href="css/typography.css">
+	<link rel="stylesheet" href="css/elements.css">
+	<link rel="stylesheet" href="css/animate.css">
+  	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="js/core.js"></script>
+	<script src="js/animate.js"></script>
+	<script>
+		window.onload = function(e){ 
+			if (Enabler.isInitialized()) {
+			    initEnabler();
+			} else {
+			    Enabler.addEventListener(studio.events.StudioEvent.INIT, initEnabler);
+			}
+
+			// loadEnablerInfos();
+			// initConfig();
+		}
+
+		// Runs when Enabler is ready.
+		function initEnabler() {
+		    if (Enabler.isPageLoaded()) {
+		        politeInit();
+		    } else {
+		        Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+		    }
+		};
+
+		// Runs when the page is completely loaded.  
+		function politeInit() {
+		    // Add your code to load creative assets or begin creative animation.
+		    loadEnablerInfos();
+		    pageLoadedHandler();
+		};
+
+		//IS VISIBLE
+		function pageLoadedHandler() {
+		    if (Enabler.isVisible()) {
+		        adVisibilityHandler();
+		    } else {
+		        Enabler.addEventListener(studio.events.StudioEvent.VISIBLE, adVisibilityHandler);
+		    }
+		}
+
+		function adVisibilityHandler() {
+		    // Load in additional assets or start the animation/video
+		    initConfig();
+		}
+	</script>
+</head>
+<body>
+	<div id="banner" class="banner">
+		<div class="hitArea"></div>
+	
+
+<!-- START -->
+
+<!-- ########## STEP1 ########## -->
+
+<div class="sprite_scroll"></div>
+
+<!-- ########## NAV ########## -->
+
+<div class="nav">
+	<div class="nav_bg">
+		<div class="bar">
+			<div class="bar_line"></div>
+			<!-- <div class="slot">
+				<div class="bar_slot"></div>
+				<div class="nav_txt"></div>
+			</div> -->
+			<div class="nav_dot">
+				<div class="nav_dot3"></div>
+				<div class="nav_dot2"></div>
+				<div class="nav_dot1"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- ########## CTA ########## -->
+
+<div class="cta">
+	<div class="logo1"></div>
+	<div class="txt1"></div>
+	<div class="cta_txt"></div>
+	<div class="cta_seta"></div>
+</div>
+
+<!-- ########## STEP2 ########## -->
+
+<div class="bg_black"></div>
+
+<div class="sprite_final"></div>
+
+<div class="txt2"></div>
+<div class="cta_txt_final"></div>
+<div class="logo2"></div>
+
+
+<div class="default">
+	<div class="bg_2_default"></div>
+	<div class="bg_1_default"></div>
+
+	<!--⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝ ◢ STEP01 ◣ ⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝-->
+
+	<div class="txt_1_1_default"></div>
+	<div class="txt_1_1_image_default"></div> <!-- text layout image -->
+	<div class="logo_vw_1_default"></div>
+
+	<!--⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝ ◢ STEP02 ◣ ⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝⇝-->
+
+	<div class="cta_txt_default"></div>
+	<div class="txt_2_1_default"></div>
+	<div class="logo_vw_2_default"></div>
+</div>
+
+<div class="preloaderMain" style="background-image: url(assets/images/_loader4.gif); position: absolute; z-index: 9999999;background-size: 100%;width: 50px;height: 50px;background-repeat: no-repeat;left: 50%;top: 50%;transform: translate(-50%,-50%);pointer-events: none;"></div>
+
+
+<!-- END -->
+
+
+	</div>
+</body>
+</html>

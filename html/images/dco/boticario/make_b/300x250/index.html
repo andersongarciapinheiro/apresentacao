@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />	
+	<meta name="ad.size" content="width=300,height=250">
+	<title>Banner - 300x250</title>
+	<link rel="stylesheet" href="css/typography.css">
+	<link rel="stylesheet" href="css/elements.css">
+	<link rel="stylesheet" href="css/animate.css">
+  	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="js/core.js"></script>
+	<script src="js/animate.js"></script>
+	<script>
+		window.onload = function(e){ 
+			if (Enabler.isInitialized()) {
+			    initEnabler();
+			} else {
+			    Enabler.addEventListener(studio.events.StudioEvent.INIT, initEnabler);
+			}
+
+			// loadEnablerInfos();
+			// initConfig();
+		}
+
+		// Runs when Enabler is ready.
+		function initEnabler() {
+		    if (Enabler.isPageLoaded()) {
+		        politeInit();
+		    } else {
+		        Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+		    }
+		};
+
+		// Runs when the page is completely loaded.  
+		function politeInit() {
+		    // Add your code to load creative assets or begin creative animation.
+		    loadEnablerInfos();
+		    pageLoadedHandler();
+		};
+
+		//IS VISIBLE
+		function pageLoadedHandler() {
+		    if (Enabler.isVisible()) {
+		        adVisibilityHandler();
+		    } else {
+		        Enabler.addEventListener(studio.events.StudioEvent.VISIBLE, adVisibilityHandler);
+		    }
+		}
+
+		function adVisibilityHandler() {
+		    // Load in additional assets or start the animation/video
+		    initConfig();
+		}
+	</script>
+</head>
+<body>
+	<div id="banner">
+		<div class="hitArea"></div>
+	
+
+<video id="player_1" class="player_1" width="300" height="250" muted="muted"></video> 
+
+
+<div class="s1_bg1"></div>
+<div class="s1_sprite1"></div>
+
+<video id="player_2" class="player_2" width="300" height="250" muted="muted"></video> 
+<div class="s2_bg1"></div>
+<div class="s2_img2"></div>
+<div class="s2_img1"></div>
+<div class="s2_txt1"></div>
+
+
+<video id="player_3" class="player_3" width="300" height="250" muted="muted"></video> 
+<div class="s3_bg1"></div>
+
+<div class="s3_img2"></div>
+<div class="s3_img1"></div>
+<div class="s3_txt1"></div>
+<div class="spriteSelo"></div>
+<div class="s3_selo"></div>
+<div class="s4_bg2"></div>
+<div class="s4_bg1"></div>
+<div class="s4_txt1"></div>
+<div class="s4_txt2"></div>
+
+
+<div class="ctaBox">
+    <div class="ctaText"></div>
+</div>
+
+<div class="preloaderMain"
+    style="background-image: url(assets/images/_loader.png); position: absolute; z-index: 9999999;background-size: 100%;width: 86px;height: 16px;background-repeat: no-repeat;left: 50%;top: 50%;transform: translate(-50%,-50%);pointer-events: none;">
+</div>
+
+
+	</div>
+</body>
+</html>

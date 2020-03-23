@@ -29,7 +29,6 @@
   margin-bottom: 200px;
 }
 
-
 .videosA,
 .videosB,
 .videosC,
@@ -111,11 +110,8 @@
 .menu3D:hover,
 .menu4E:hover,
 .menu4D:hover {
-  
   color: #607479;
-  
 }
-
 
 .menu1D,
 .menu2D,
@@ -130,8 +126,3 @@
   display: block;
   padding: 0px;
 }
-
-
-
-
-

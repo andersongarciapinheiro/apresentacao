@@ -3,6 +3,10 @@
   background-color: #242944;
 }
 
+.section-a >p>span {
+  font-weight: bold;
+}
+
 .d-none {
   display: none;
 }

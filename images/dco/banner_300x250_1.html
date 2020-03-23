@@ -424,11 +424,21 @@
 					[".s3_txtlegal1", .5]
 				]), s.animationElements("all_in2", [
 					[".s4_ctabg1", 1.5]
-				])
+				]),
+				s.animationElements("STOP_HERE", [[".s4_ctabg1", .0]],function(){
+					loopingNow();
+				})
 			},
 			e = function (t) {
 				window.open("%%CLICK_URL_ESC%%%%DEST_URL%%")
 			};
+			function loopingNow(){
+
+			setTimeout(function(){
+					s.clearAnimation(".all")
+					a()
+				},4000)
+			}
 		document.addEventListener("DOMContentLoaded", function (t) {
 			a()
 		});

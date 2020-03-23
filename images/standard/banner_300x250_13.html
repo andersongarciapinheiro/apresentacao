@@ -881,11 +881,21 @@
           [".s4_ctatxt1", .1]
         ]), i.animationElements("txt_in", [
           [".s4_ctabg2", 0]
-        ])
+        ]),
+        i.animationElements("STOP_HERE", [[".s4_ctabg2", .0]],function(){
+					loopingNow();
+				})
       },
       e = function (n) {
         window.open("%%CLICK_URL_ESC%%%%DEST_URL%%")
       };
+      function loopingNow(){
+
+      setTimeout(function(){
+          i.clearAnimation(".all")
+          a()
+        },4000)
+}
     document.addEventListener("DOMContentLoaded", function (n) {
       a()
     });

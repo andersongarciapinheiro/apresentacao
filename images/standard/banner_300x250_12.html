@@ -716,11 +716,21 @@
 					[".s3_img2", .05]
 				]), s.animationElements("img_in2", [
 					[".s3_img3", .05]
-				])
+				]),
+				s.animationElements("STOP_HERE", [[".s3_img3", .0]],function(){
+					loopingNow();
+				})
 			},
 			i = function (t) {
 				window.open("%%CLICK_URL_ESC%%%%DEST_URL%%")
 			};
+			function loopingNow(){
+
+			setTimeout(function(){
+					s.clearAnimation(".all")
+					e()
+				},4000)
+			}
 		document.addEventListener("DOMContentLoaded", function (t) {
 			e()
 		});

@@ -952,11 +952,21 @@
 					[".s2_cta1", .1]
 				]), t.animationElements("seta_vaivem", [
 					[".s2_cta1", .5]
-				])
+				]),
+				t.animationElements("STOP_HERE", [[".s2_cta1", .0]],function(){
+					loopingNow();
+				})
 			},
 			i = function (n) {
 				window.open("%%CLICK_URL_ESC%%%%DEST_URL%%")
 			};
+			function loopingNow(){
+
+			setTimeout(function(){
+					t.clearAnimation(".all")
+					a()
+				},4000)
+			}
 		document.addEventListener("DOMContentLoaded", function (n) {
 			a()
 		});

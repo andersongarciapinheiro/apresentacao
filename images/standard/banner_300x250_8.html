@@ -779,11 +779,21 @@
 					[".s1_mais4", 0]
 				]), e.animationElements("seta_vaivem", [
 					[".s2_cta1", 0]
-				])
+				]),
+				e.animationElements("STOP_HERE", [[".s2_cta1", .0]],function(){
+					loopingNow();
+				})
 			},
 			i = function (n) {
 				window.open("%%CLICK_URL_ESC%%%%DEST_URL%%")
 			};
+			function loopingNow(){
+
+			setTimeout(function(){
+					e.clearAnimation(".all")
+					a()
+				},4000)
+			}
 		document.addEventListener("DOMContentLoaded", function (n) {
 			a()
 		});

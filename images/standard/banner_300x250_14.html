@@ -894,7 +894,10 @@
 					[".s3_ctatxt", .15]
 				]), s.animationElements("element_ease_in", [
 					[".s3_legal", .15]
-				])
+				]),
+				s.animationElements("STOP_HERE", [[".s3_legal", .0]],function(){
+					loopingNow();
+				})
 			};
 		document.querySelector("#banner").addEventListener("mousemove", n), document.querySelector("#banner")
 			.addEventListener("mouseleave", t);
@@ -903,6 +906,13 @@
 		var o = function (e) {
 			window.open("%%CLICK_URL_ESC%%%%DEST_URL%%")
 		};
+		function loopingNow(){
+
+		setTimeout(function(){
+				s.clearAnimation(".all")
+				a()
+			},4000)
+		}
 		document.addEventListener("DOMContentLoaded", function (e) {
 			a()
 		});

@@ -48,7 +48,7 @@ if (windowWidth > 1023) {
 
 function resizeDesktop() {
   if (!regexHtml.exec(indexHtml)) {
-    headerContainer.style.top = "68px"
+    headerContainer.style.top = "30px"
     window.addEventListener("scroll", onScrollIndexDesktop)
 
   } else {
@@ -60,10 +60,10 @@ function resizeDesktop() {
 function onScrollIndexDesktop() {
   if (window.pageYOffset > 31) {
     headerContainer.classList.add("header-fixed")
-    headerContainer.style.top = "30px"
+    headerContainer.style.top = "0px"
   } else {
     headerContainer.classList.remove("header-fixed")
-    headerContainer.style.top = "68px"
+    headerContainer.style.top = "30px"
   }
 }
 

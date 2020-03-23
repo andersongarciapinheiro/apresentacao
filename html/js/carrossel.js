@@ -2,11 +2,16 @@
 let videosA = document.querySelectorAll(".videoA")
 let menu1E = document.querySelector(".menu1E")
 let menu1D = document.querySelector(".menu1D")
+var vid = document.querySelectorAll(".vid"); 
 
 let positionArrayA = 0
 
-menu1D.onclick = () => {goRightA()}
-menu1E.onclick = () => {goLeftA()}
+menu1D.onclick = () => {
+  goRightA()
+}
+menu1E.onclick = () => {
+  goLeftA()
+}
 
 function goRightA() {
   if(positionArrayA == videosA.length -1) {
@@ -14,12 +19,14 @@ function goRightA() {
     videosA[positionArrayA].classList.add("revel")
     let positionArrayAPrevious = videosA.length - 1
     videosA[positionArrayAPrevious].classList.remove("revel")
+    vid[positionArrayAPrevious].pause()
     
   } else {
     positionArrayA = positionArrayA + 1
     videosA[positionArrayA].classList.add("revel")
     let positionArrayAPrevious = positionArrayA - 1
     videosA[positionArrayAPrevious].classList.remove("revel")
+    vid[positionArrayAPrevious].pause()
   }
 }
 
@@ -30,12 +37,14 @@ function goLeftA() {
     let positionArrayAPrevious = positionArrayA - positionArrayA
     console.log(positionArrayAPrevious)
     videosA[positionArrayAPrevious].classList.remove("revel")
-    
+    vid[positionArrayAPrevious].pause()
+        
   } else {
     positionArrayA = positionArrayA - 1
     videosA[positionArrayA].classList.add("revel")
     let positionArrayAPrevious = positionArrayA + 1
     videosA[positionArrayAPrevious].classList.remove("revel")
+    vid[positionArrayAPrevious].pause()
   }
 }
 
@@ -164,9 +173,5 @@ function goLeftD() {
     videosD[positionArrayDPrevious].classList.remove("revel")
   }
 }
-
-
-
-
 
 

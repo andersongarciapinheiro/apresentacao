@@ -725,8 +725,32 @@
 			void(0);
 		}, false);
 		
-		var video = document.querySelector('.s1_video');
-		video.addEventListener('animationstart', video.play)
+		
+		var video = document.querySelector('.s1_video')
+		
+		function playVideo() {
+			video.play()
+		}
+		playVideo()
+		
+		
+		window.onload = () => {
+			var duration = 13 * 1000
+			var divs = document.querySelectorAll('#banner div')
+			
+			function resetAnimation() {
+				for (var i = 0; i < divs.length; i++) {
+					var className = divs[i].className
+					divs[i].className = ''
+					playVideo()
+
+					void divs[i].offsetWidth
+					divs[i].className = className
+				}
+				setTimeout(resetAnimation, duration)
+			}
+			setTimeout(resetAnimation, duration)
+		}
 			
 	</script>
 </body>

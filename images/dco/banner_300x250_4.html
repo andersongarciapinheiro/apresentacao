@@ -296,9 +296,50 @@
 			window.open(clickTag);
 			void(0);
 		}, false);
+		
+		var video1 = document.querySelector('.s1_video')
+		var video2 = document.querySelector('.s2_video')
+		
+		function playVideo1() {
+			video1.play()
+		}
+		playVideo1()
+		
+		
+		function playVideo2() {
+			setTimeout(function () {
+				video2.style.zIndex = "0"
+				video2.play()
+			}, 3700)
+		}
+		playVideo2()
+		
+		
+		console.log(video2)
+		
+		window.onload = () => {
+			var duration = 15 * 1000
+			var divs = document.querySelectorAll('#banner div')
+			
+			function resetAnimation() {
+				var video2 = document.querySelector('.s2_video')
+				video2.style.zIndex = "-1"
+				for (var i = 0; i < divs.length; i++) {
+					var className = divs[i].className
+					divs[i].className = ''
+					var video1 = document.querySelector('.s1_video')
+					var video2 = document.querySelector('.s2_video')
 
-		var video = document.querySelector('.s2_video');
-		video.addEventListener('animationstart', video.play)
+					playVideo1()
+					playVideo2()
+					void divs[i].offsetWidth
+					divs[i].className = className
+				}
+				setTimeout(resetAnimation, duration)
+			}
+			setTimeout(resetAnimation, duration)
+		}
+
 	</script>
 </body>
 

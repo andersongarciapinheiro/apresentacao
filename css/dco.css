@@ -29,6 +29,37 @@
   margin-bottom: 200px;
 }
 
+.grid {
+  max-width: 1248px;
+  left: 50%;
+  transform: translateX(-50%);
+   
+}
 
+.grid-item {
+  width: 300px;
+  height: 250px;
+  float: left;
+}
+
+.grid-item-2 {
+  width: 300px;
+  height: 600px;
+  float: left;
+
+}
+
+@media (max-width: 1400px) {
+  .grid {
+    width: 936px;
+  }
+}
+
+
+@media (max-width: 1280px) {
+  .grid {
+    width: 624px;
+  }
+}
 
 

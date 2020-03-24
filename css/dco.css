@@ -63,3 +63,8 @@
 }
 
 
+@media (max-width:480px) {
+  .grid {
+    width: 300px;
+  }
+}

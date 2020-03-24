@@ -2,7 +2,11 @@
 let videosA = document.querySelectorAll(".videoA")
 let menu1E = document.querySelector(".menu1E")
 let menu1D = document.querySelector(".menu1D")
-var vid = document.querySelectorAll(".vid"); 
+var vidA = document.querySelectorAll(".vidA") 
+var vidB = document.querySelectorAll(".vidB") 
+var vidC = document.querySelectorAll(".vidC") 
+var vidD = document.querySelectorAll(".vidD") 
+
 
 let positionArrayA = 0
 
@@ -19,14 +23,14 @@ function goRightA() {
     videosA[positionArrayA].classList.add("revel")
     let positionArrayAPrevious = videosA.length - 1
     videosA[positionArrayAPrevious].classList.remove("revel")
-    vid[positionArrayAPrevious].pause()
+    vidA[positionArrayAPrevious].pause()
     
   } else {
     positionArrayA = positionArrayA + 1
     videosA[positionArrayA].classList.add("revel")
     let positionArrayAPrevious = positionArrayA - 1
     videosA[positionArrayAPrevious].classList.remove("revel")
-    vid[positionArrayAPrevious].pause()
+    vidA[positionArrayAPrevious].pause()
   }
 }
 
@@ -37,14 +41,14 @@ function goLeftA() {
     let positionArrayAPrevious = positionArrayA - positionArrayA
     console.log(positionArrayAPrevious)
     videosA[positionArrayAPrevious].classList.remove("revel")
-    vid[positionArrayAPrevious].pause()
+    vidA[positionArrayAPrevious].pause()
         
   } else {
     positionArrayA = positionArrayA - 1
     videosA[positionArrayA].classList.add("revel")
     let positionArrayAPrevious = positionArrayA + 1
     videosA[positionArrayAPrevious].classList.remove("revel")
-    vid[positionArrayAPrevious].pause()
+    vidA[positionArrayAPrevious].pause()
   }
 }
 
@@ -65,12 +69,14 @@ function goRightB() {
     videosB[positionArrayB].classList.add("revel")
     let positionArrayBPrevious = videosB.length - 1
     videosB[positionArrayBPrevious].classList.remove("revel")
+    vidB[positionArrayBPrevious].pause()
     
   } else {
     positionArrayB = positionArrayB + 1
     videosB[positionArrayB].classList.add("revel")
     let positionArrayBPrevious = positionArrayB - 1
     videosB[positionArrayBPrevious].classList.remove("revel")
+    vidB[positionArrayBPrevious].pause()
   }
 }
 
@@ -81,12 +87,14 @@ function goLeftB() {
     let positionArrayBPrevious = positionArrayB - positionArrayB
     console.log(positionArrayBPrevious)
     videosB[positionArrayBPrevious].classList.remove("revel")
+    vidB[positionArrayBPrevious].pause()
     
   } else {
     positionArrayB = positionArrayB - 1
     videosB[positionArrayB].classList.add("revel")
     let positionArrayBPrevious = positionArrayB + 1
     videosB[positionArrayBPrevious].classList.remove("revel")
+    vidB[positionArrayBPrevious].pause()
   }
 }
 
@@ -107,12 +115,14 @@ function goRightC() {
     videosC[positionArrayC].classList.add("revel")
     let positionArrayCPrevious = videosC.length - 1
     videosC[positionArrayCPrevious].classList.remove("revel")
+    vidC[positionArrayCPrevious].pause()
     
   } else {
     positionArrayC = positionArrayC + 1
     videosC[positionArrayC].classList.add("revel")
     let positionArrayCPrevious = positionArrayC - 1
     videosC[positionArrayCPrevious].classList.remove("revel")
+    vidC[positionArrayCPrevious].pause()
   }
 }
 
@@ -123,12 +133,14 @@ function goLeftC() {
     let positionArrayCPrevious = positionArrayC - positionArrayC
     console.log(positionArrayCPrevious)
     videosC[positionArrayCPrevious].classList.remove("revel")
+    vidC[positionArrayCPrevious].pause()
     
   } else {
     positionArrayC = positionArrayC - 1
     videosC[positionArrayC].classList.add("revel")
     let positionArrayCPrevious = positionArrayC + 1
     videosC[positionArrayCPrevious].classList.remove("revel")
+    vidC[positionArrayCPrevious].pause()
   }
 }
 
@@ -149,12 +161,14 @@ function goRightD() {
     videosD[positionArrayD].classList.add("revel")
     let positionArrayDPrevious = videosD.length - 1
     videosD[positionArrayDPrevious].classList.remove("revel")
+    vidD[positionArrayDPrevious].pause()
     
   } else {
     positionArrayD = positionArrayD + 1
     videosD[positionArrayD].classList.add("revel")
     let positionArrayDPrevious = positionArrayD - 1
     videosD[positionArrayDPrevious].classList.remove("revel")
+    vidD[positionArrayDPrevious].pause()
   }
 }
 
@@ -165,12 +179,14 @@ function goLeftD() {
     let positionArrayDPrevious = positionArrayD - positionArrayD
     console.log(positionArrayDPrevious)
     videosD[positionArrayDPrevious].classList.remove("revel")
+    vidD[positionArrayDPrevious].pause()
     
   } else {
     positionArrayD = positionArrayD - 1
     videosD[positionArrayD].classList.add("revel")
     let positionArrayDPrevious = positionArrayD + 1
     videosD[positionArrayDPrevious].classList.remove("revel")
+    vidD[positionArrayDPrevious].pause()
   }
 }
 

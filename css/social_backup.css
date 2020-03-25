@@ -1,0 +1,128 @@
+
+.container-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 230px;
+  background-color: #242944;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.container-title p:first-child {
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.border-bottom-h1 {
+  position: absolute;
+  top: 158px;
+  transform: translateX(3%);
+
+}
+
+.creativity {
+  width: 100%;
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 200px;
+}
+
+.videosA,
+.videosB,
+.videosC,
+.videosD {
+  position: relative;
+  background: #242944;
+  width: 100%;
+  height: 940px;
+}
+
+.videoA,
+.videoB,
+.videoC,
+.videoD {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.grid {
+  margin: 0 auto 200px auto;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.video1,
+.video2,
+.video3,
+.video4,
+.video5,
+.video6,
+.video7,
+.video8,
+.video9,
+.video10,
+.video11,
+.video12,
+.video13,
+.video14,
+.video15,
+.video16 {
+  opacity: 0;
+  z-index: -10;
+}
+
+.revel {
+  opacity: 1;
+  z-index: 1;
+}
+
+.menu1E,
+.menu1D,
+.menu2E,
+.menu2D,
+.menu3E,
+.menu3D,
+.menu4E,
+.menu4D {
+  width: 30px;
+  height: 50px;
+  background-color: rgb(0,0,0,.3);
+  border-radius: 5px;
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  margin: 20px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 44px;
+  color: #424242;
+  cursor: pointer;
+}
+
+.menu1E:hover,
+.menu1D:hover,
+.menu2E:hover,
+.menu2D:hover,
+.menu3E:hover,
+.menu3D:hover,
+.menu4E:hover,
+.menu4D:hover {
+  color: #607479;
+}
+
+.menu1D,
+.menu2D,
+.menu3D,
+.menu4D {
+  right: 0;
+}
+
+.social2,
+.social3,
+.social4 {
+  display: block;
+  padding: 0px;
+}
